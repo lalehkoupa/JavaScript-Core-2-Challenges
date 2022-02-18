@@ -1,10 +1,16 @@
-function calculateWords(chapterOfABook) {
+const str = "You and me and You";
+const calculateWords = (chapterOfABook) => {
   const wordCount = {};
-
-  // Write your code in here
-
+  let wordArr = str.split(" ");
+  wordArr.forEach((word) => {
+    if (word !== "") {
+      Object.keys(wordCount).includes(word)
+        ? (wordCount[word] += 1)
+        : (wordCount[word] = 1);
+    }
+  });
   return wordCount;
-}
+};
 
 calculateWords(getDraculaChapterOne());
 

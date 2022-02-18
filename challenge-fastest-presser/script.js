@@ -9,3 +9,9 @@ function keyBoardEvents(e) {
 }
 
 document.addEventListener("keypress", keyBoardEvents);
+document.getElementById("startGameBtn").addEventListener("click", () => {
+  const time = document.getElementById("timeTxt").value;
+  setTimeout(() => {
+    console.log("hi"), time;
+  });
+});
